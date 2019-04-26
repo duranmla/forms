@@ -106,6 +106,7 @@ export default {
       $ref: "#/definitions/USAStates"
     },
     "zip-code": {
+      title: "Your Zip Code",
       type: "string",
       pattern: "[0-9]{5}"
     }
