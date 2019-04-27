@@ -8,7 +8,8 @@ const uiSchema = {
   "ui:order": ["*", "debts", "personalInformation", "collectionNotice"],
   debts: {
     debtType: {
-      "ui:placeholder": "Select one"
+      "ui:placeholder": "Select one",
+      "ui:help": 'If you don\'t see your type of debt, choose "Other"'
     },
     debtAmount: {
       classNames: "prefix-currency"
