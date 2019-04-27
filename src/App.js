@@ -17,14 +17,28 @@ const FormWrapper = styled.div`
     padding: 1rem 0;
   }
 
+  // This allow to make it as a overall title instead as a section
+  #root__title {
+    border-bottom: 0;
+    font-size: 2rem;
+    margin-bottom: 0rem;
+  }
+
+  #root__description {
+    font-size: 1.25rem;
+    margin-bottom: 2rem;
+  }
+
   .form-group {
-    &:not(.field-object) {
+    text-align: left;
+
+    [id*="__title"],
+    .field-description {
       padding: 0 1rem;
     }
 
-    &.field-string,
-    &.field-number {
-      text-align: left;
+    &:not(.field-object) {
+      padding: 0 1rem;
     }
   }
 
@@ -35,6 +49,24 @@ const FormWrapper = styled.div`
   }
 
   // Fields
+  .prefix-currency {
+    position: relative;
+
+    &::before {
+      bottom: 0;
+      content: "$";
+      display: block;
+      font-size: 1rem;
+      left: 1rem;
+      line-height: 2.2rem;
+      opacity: 0.5;
+      position: absolute;
+    }
+
+    > input {
+      padding-left: 1rem;
+    }
+  }
 
   // Address
   .field-address {
