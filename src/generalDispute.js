@@ -1,30 +1,17 @@
+import states from "./states";
+import disputeTypes from "./disputeTypes";
+
 export default {
   definitions: {
     DebtTypes: {
       type: "string",
-      anyOf: [
-        {
-          title: "Federal student loan debt",
-          const: "federalStudentLoanDebt"
-        },
-        {
-          title: "Credit card debt",
-          const: "creditCardDebt"
-        }
-      ]
+      enum: disputeTypes.values,
+      enumNames: disputeTypes.labels
     },
     USAStates: {
       type: "string",
-      anyOf: [
-        {
-          title: "Alabama",
-          const: "foo"
-        },
-        {
-          title: "Florida",
-          const: "bar"
-        }
-      ]
+      enumNames: states.labels,
+      enum: states.values
     }
   },
   $schema: "http://json-schema.org/schema#",

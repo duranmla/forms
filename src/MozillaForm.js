@@ -5,7 +5,7 @@ import generalDispute from "./generalDispute";
 const log = type => console.log.bind(console, type);
 
 const uiSchema = {
-  "ui:order": ["debts", "personalInformation", "collectionNotice"],
+  "ui:order": ["*", "debts", "personalInformation", "collectionNotice"],
   debts: {
     debtType: {
       "ui:placeholder": "Select one"
