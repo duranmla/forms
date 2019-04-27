@@ -43,56 +43,29 @@ export default {
         debtType: {
           type: "string",
           title: "Debt Type",
-          enumNames: disputeTypes.labels,
-          enum: disputeTypes.values
+          $ref: "#/definitions/DebtTypes"
+        },
+        debtAmount: {
+          title: "Amount",
+          type: "number"
         }
       },
-      required: ["debtType"],
+      required: ["debtType", "debtAmount"],
       dependencies: {
         debtType: {
           oneOf: [
             {
               properties: {
                 debtType: {
-                  title: disputeTypes.labels[0],
-                  enum: [disputeTypes.values[0]]
-                },
-                debtAmount: {
-                  title: "Amount",
-                  type: "number"
-                }
-              },
-              required: ["debtAmount"]
-            },
-            {
-              properties: {
-                debtType: {
-                  title: disputeTypes.labels[1],
-                  enum: [disputeTypes.values[1]]
-                },
-                debtAmount: {
-                  title: "Amount",
-                  type: "number"
-                }
-              },
-              required: ["debtAmount"]
-            },
-            {
-              properties: {
-                debtType: {
                   title: disputeTypes.labels[2],
                   enum: [disputeTypes.values[2]]
-                },
-                debtAmount: {
-                  title: "Amount",
-                  type: "number"
                 },
                 debtDescription: {
                   title: "Description",
                   type: "string"
                 }
               },
-              required: ["debtAmount", "debtDescription"]
+              required: ["debtDescription"]
             }
           ]
         }
