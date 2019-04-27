@@ -18,7 +18,25 @@ const uiSchema = {
     "agency-state",
     "agency-zip-code",
     "collection-notice-date"
-  ]
+  ],
+  city: {
+    classNames: "field-address"
+  },
+  state: {
+    classNames: "field-address"
+  },
+  "zip-code": {
+    classNames: "field-address"
+  },
+  "agency-city": {
+    classNames: "field-address"
+  },
+  "agency-state": {
+    classNames: "field-address"
+  },
+  "agency-zip-code": {
+    classNames: "field-address"
+  }
 };
 
 export default () => (
